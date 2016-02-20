@@ -58,14 +58,14 @@ if(isset($_GET['err'])){
 				<div class="top-menu ">
 				  <span class="menu"> </span>
 					<ul>
-						<li><a href="index.php">Home</a></li>
-						<li><a href="index.php">Convention</a></li>
-						<li><a href="index.php">Sponsors</a></li>
-						<li><a href="index.php">Events</a></li>
-						<li><a href="index.php">Workshops</a></li>
-						<li><a href="index.php">About US</a></li>
-						<li><a href="login.php">Register</a></li>
-						<li><a href="index.php">Gallery</a></li>
+						<li><a href="/">Home</a></li>
+						<li><a href="#">Convention</a></li>
+						<li><a href="/#services">Sponsors</a></li>
+						<li><a href="/#portfolio">Events</a></li>
+						<li><a href="/#portfolio">Workshops</a></li>
+						<li><a href="/#about">About US</a></li>
+						<li><a href="/signupmech.php">Register</a></li>
+						<li><a href="/#asme">Gallery</a></li>
 						<div class="clearfix"></div>
 					</ul>
 				</div>
@@ -107,7 +107,7 @@ if(isset($_GET['err'])){
 	<?php
 	include("connection.php");
 	$email = $_SESSION["email"];
-		$sql ="Select * from yes_payment where email='$email'";
+		$sql ="Select * from yes_payment_mech where email='$email'";
 		$result = mysqli_query($con, $sql);
 		
 		if (mysqli_num_rows($result) > 0) 
@@ -140,7 +140,7 @@ if(isset($_GET['err'])){
 	<div class="container">
 		<form role="form" action="main_reg.php" method="post">
 			<div class="form-group">
-                    <label for="InputName">Event<span style="color:red;" class="glyphicon glyphicon-asterisk"></span></label>
+                    <label for="InputName">Event</label>
                     <div class="input-group">
 					<input type="radio" name="comp" value="1" checked> <label for="InputName">&nbsp;&nbsp;&nbsp;Dominos</label><br>
 					<input type="radio" name="comp" value="2"> <label for="InputName">&nbsp;&nbsp;&nbsp;Paper Presentation Competition</label><br>
@@ -156,6 +156,12 @@ if(isset($_GET['err'])){
 					<input type="radio" name="comp" value="7" checked> <label for="InputName1">&nbsp;&nbsp;&nbsp;Unigraphics</label><br>
 					<input type="radio" name="comp" value="8"> <label for="InputName1">&nbsp;&nbsp;&nbsp;Vehicle Reconstructing</label><br>
 					<input type="radio" name="comp" value="9"> <label for="InputName1">&nbsp;&nbsp;&nbsp;Weapon Technology</label><br>
+					</div>
+             </div>
+             <div class="form-group">
+                    <label for="InputName">Conference</label>
+                    <div class="input-group">
+					<input type="radio" name="comp" value="10"> <label for="InputName">&nbsp;&nbsp;&nbsp;The Mechanical Conference</label><br>
 					</div>
              </div>
 			 <input type="submit" name="submit" id="submit" value="&nbsp;&nbsp;&nbsp;&nbsp;Make Payment&nbsp;&nbsp;&nbsp;&nbsp;" class="btn btn-primary">
@@ -224,7 +230,7 @@ if(isset($_GET['err'])){
 				<p>Copyright &copy; 2015  <a href="#">ASME INDIA
 				</a></p>
 				<p>
-				Developed By: <a href="https://www.facebook.com/gupta.himanshu19" target="_blank">Himanshu Gupta </a> , <a href="https://www.facebook.com/devmukul44" target="_blank">Mukul Dev</a>
+				Developed By: <a href="https://www.facebook.com/gupta.himanshu19" target="_blank">Himanshu Gupta </a> , <a href="https://www.facebook.com/devmukul44" target="_blank">Mukul Dev</a>,<a href="https://www.facebook.com/nimeshkhandelwa" target="_blank">Nimesh Khandelwal</a>,<a href="https://www.facebook.com/saksham.jain.12" target="_blank">Saksham Jain</a>
 				</p>
 			</div>
 			<div class="col-md-4 fax">

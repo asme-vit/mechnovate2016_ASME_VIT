@@ -55,7 +55,7 @@ if($_SESSION["email"] == "")
 		<div class="top-header">
 			<div class="container">
 				<div class="logo">
-					<a href="index.php"><img src="images/asme_logo1.png" class="img-responsive" alt="" /></a>			
+					<a href="index.php"><img src="Images/asme_logo1.png" class="img-responsive" alt="" /></a>			
 				</div>
 				<div class="top-menu ">
 				  <span class="menu"> </span>
@@ -116,7 +116,7 @@ if($_SESSION["email"] == "")
 
                         	if($status=="0300"){
 								
-								$sql65="SELECT * from pre_payment WHERE refno=".$login;
+								$sql65="SELECT * from pre_payment_mech WHERE reference_number=".$login;
                                 $res=mysqli_query($con,$sql65);
                                 $numb=mysqli_num_rows($res);
 								$row=mysqli_fetch_array($res);
@@ -129,11 +129,11 @@ if($_SESSION["email"] == "")
 								$amount=$row['amount'];
 								
 								if($numb==0){
-                                    header("Location: http://vitspdc.com/main.php");  
+                                    header("Location: http://mechnovate.org/main.php");  
                                 }
 								else
 								{
-    				            $sql="INSERT into yes_payment values('".$refno."','".$email."', '".$tid."', '".$brefno."', '".$status."','".$amount."', '".$txndate."', '".$login."');";
+    				            $sql="INSERT into yes_payment_mech values('".$refno."','".$email."', '".$tid."', '".$brefno."', '".$status."','".$amount."', '".$txndate."', '".$login."','".$event."');";
     				            $res=mysqli_query($con,$sql);
 								}
     				            if(!$res){
@@ -159,7 +159,7 @@ if($_SESSION["email"] == "")
                                 //email Invoice
                                 
                                 $to = $email; 
-                				$from = "contact@vitspdc.com";
+                				$from = "support@mechnovate.org";
                 				$subject = " Mechnovate 2016 - Registration "; 
                 				$message = "<p>Congatulations your payment is Succesfull.</p><p>Find the attachment for Invoice</p>";
 
@@ -287,7 +287,7 @@ if($_SESSION["email"] == "")
 					<div class="flickr">
 					    <h4>Flickr Photostream</h4>
 						<ul>
-							<li><img src="images/1.jpg" style="width:1%;height:1%"></li>
+							<li><img src="Images/1.jpg" style="width:1%;height:1%"></li>
 							<li></li>
 							<li></li>
 							<li></li>

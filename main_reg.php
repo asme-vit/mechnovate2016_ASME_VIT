@@ -47,7 +47,10 @@ else if($event == 9)
 {
 	$cost = 500;
 }
-
+else if($event == 10)
+{
+	$cost = 900;
+}
 ?>
 <?php
 
@@ -55,17 +58,17 @@ else if($event == 9)
 				$email=$_SESSION["email"];
 				$amount=$cost;
 					
-					$sql="Select * from signup where email='$email'";
+					$sql="Select * from signup_mech where email='$email'";
                     $res=mysqli_query($con,$sql);
                     $row1=mysqli_fetch_row($res);
-                    $name = $row1[2];
+                    $name = $row1[0];
 
-					$sql = "Select max(refno) from pre_payment";
+					$sql = "Select max(reference_number) from pre_payment_mech";
 					$res = mysqli_query($con,$sql);
 					$row = mysqli_fetch_row($res);
 					$refno = $row[0] + 1;
 
-                        $sql="INSERT INTO pre_payment values('$email','$name','$refno','$amount')";
+                        $sql="INSERT INTO pre_payment_mech values('$email','$name','$refno','$amount','$event')";
                         $res=mysqli_query($con,$sql);
 					
                             //Payment gateway redirection
@@ -78,7 +81,7 @@ else if($event == 9)
                             <input type="hidden" name="id_event" value="13">
                             <input type="hidden" name="amt_event" value="'.$amount.'">
                             <input type="hidden" name="id_merchant" value="1012">
-                            <input type="hidden" name="id_password" value="me9erli61620@">';
+                            <input type="hidden" name="id_password" value="(me9erli61620@)">';
                             echo '</form>'; 
 
 			

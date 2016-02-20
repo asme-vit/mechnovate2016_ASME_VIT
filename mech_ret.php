@@ -120,7 +120,7 @@ if($_SESSION["email"] == "")
 
                         	if($status=="0300"){
 								
-								$sql65="SELECT * from pre_payment WHERE refno=".$login;
+								$sql65="SELECT * from pre_payment_mech WHERE refno=".$login;
                                 $res=mysqli_query($con,$sql65);
                                 $numb=mysqli_num_rows($res);
 								$row=mysqli_fetch_array($res);
@@ -131,13 +131,14 @@ if($_SESSION["email"] == "")
                                 $asme_id="NAN";
                                 $email=$row['email'];
 								$amount=$row['amount'];
+								$event=$row['event'];
 								
 								if($numb==0){
-                                    header("Location: http://vitspdc.com/main.php");  
+                                    header("Location: http://mechnovate.org/main.php");  
                                 }
 								else
 								{
-    				            $sql="INSERT into yes_payment values('".$refno."','".$email."', '".$tid."', '".$brefno."', '".$status."','".$amount."', '".$txndate."', '".$login."');";
+    				            $sql="INSERT into yes_payment_mech values('".$refno."','".$email."', '".$tid."', '".$brefno."', '".$status."','".$amount."', '".$txndate."', '".$login."','".$event."');";
     				            $res=mysqli_query($con,$sql);
 								}
     				            if(!$res){
@@ -163,7 +164,7 @@ if($_SESSION["email"] == "")
                                 //email Invoice
                                 
                                 $to = $email; 
-                				$from = "contact@vitspdc.com";
+                				$from = "support@mechnovate.org";
                 				$subject = " Mechnovate 2016 - Registration "; 
                 				$message = "<p>Congatulations your payment is Succesfull.</p><p>Find the attachment for Invoice</p>";
 
