@@ -51,6 +51,9 @@ else if($event == 10)
 {
 	$cost = 900;
 }
+
+$_SESSION["cost"] = $cost;
+
 ?>
 <?php
 
@@ -58,10 +61,10 @@ else if($event == 10)
 				$email=$_SESSION["email"];
 				$amount=$cost;
 					
-					$sql="Select * from signup_mech where email='$email'";
+					$sql="Select * from details_mech where email='$email'";
                     $res=mysqli_query($con,$sql);
                     $row1=mysqli_fetch_row($res);
-                    $name = $row1[0];
+                    $name = $row1[0]." ".$row1[1];
 
 					$sql = "Select max(reference_number) from pre_payment_mech";
 					$res = mysqli_query($con,$sql);

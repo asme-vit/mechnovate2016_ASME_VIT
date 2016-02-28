@@ -59,11 +59,38 @@ return false;
 }
 }
 </script>
+<style>
+body {
+	
+	padding-top:80px;
+}
+	.navbar {
+    min-height: 80px;
+   background-color:#fffffff;
+}
+#brand {
+	font-size:2em;
+	padding-top:30px;
+  }
+.navbar-nav > li > a {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    line-height: 80px;
+}
+.scroll {
+	font-size:1.3em;
+}
+@media (max-width: 767px) {
+    .navbar-nav > li > a {
+    line-height: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;}
+}
+</style>
 </head>
 <body>
-	<!-- header-section-starts -->
-	<div class="header">
-	<nav class="topheader navbar navbar-default navbar-fixed-top">
+		<!--top-nav-->
+<nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -71,34 +98,24 @@ return false;
         <span class="icon-bar"></span>
         <span class="icon-bar"></span> 
       </button>
-      <a class="navbar-brand" href="#" id="brand" style='padding-right:20px;font-size:1.5em;'>Mechnovate</a>
+      <a class="navbar-brand" href="#" id="brand" style="color:#3C948B">Mechnovate'16</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-left" id="tabs">
-        <li><a href="index.php" class="scroll"  style='padding-left:40px;'>Home</a></li>
+      <ul class="nav navbar-nav navbar-right" id="tabs">
+      						<li><a href="/#home">Home</a></li>
 						<li><a href="#">Convention</a></li>
-						<li><a href="index.php/#services">Sponsors</a></li>
-						<li><a href="index.php/#portfolio">Events</a></li>
-						<li><a href="index.php/#portfolio">Workshops</a></li>
-						<li><a href="index.php/#about">About US</a></li>
-						<li><a href="signupmech.php">Register</a></li>
-						<li><a href="index.php/#asme">Gallery</a></li>
-						<li><a href="index.php/" class="scroll">Contact Us</a></li>
-		
+						<li><a href="/#services">Sponsors</a></li>
+						<li><a href="/#portfolio">Events</a></li>
+						<li><a href="/#portfolio">Workshops</a></li>
+						<li><a href="/#about">About US</a></li>
+						<li><a href="/#asme">Gallery</a></li>
+						<li><a href="/">Contact Us</a></li>
+						<div class="clearfix"></div>
       </ul>
     </div>
-    <script>
-		 $("span.menu").click(function(){
-		 $(".top-menu ul").slideToggle("slow" , function(){
-		 });
-		 });
-		 </script>
-
- 			<div class="clearfix"></div>
   </div>
 </nav>
-
-    <!-- header-section-ends --> 
+<!--top-nav ends-->
 	
 <!--User-Login-->
 <h1>User Login</h1>

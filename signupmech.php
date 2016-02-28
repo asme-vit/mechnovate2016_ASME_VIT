@@ -20,6 +20,7 @@ if(isset($_GET['err'])){
 <!-- Custom Theme files -->
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <!-- Custom Theme files -->
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css'/>
 
     <!------ Eng Light Box ------>	
 	<meta charset="utf-8" />
@@ -42,15 +43,16 @@ if(isset($_GET['err'])){
 <link href='//fonts.googleapis.com/css?family=Marvel:400,700' rel='stylesheet' type='text/css'>
 <!--//webfonts-->
 <style>
+body {
+	padding-top:80px;
+}
 .navbar {
     min-height: 80px;
    background-color:#fffffff;
 }
-#brand_name {
+#brand {
 	font-size:2em;
-	float:left;
-	color:#ffffff;
-	padding:20px 0 0 30px;
+	padding-top:30px;
   }
 .navbar-nav > li > a {
     padding-top: 0px;
@@ -73,6 +75,24 @@ if(isset($_GET['err'])){
 #return a:visited
 {
 	color:white;
+}
+.footer {
+	margin-top:50px;
+}
+.form-control {
+	font-family: 'Open Sans', sans-serif;
+	  outline: none;
+	  border: none;
+	  width: 240px;
+	  height:60px;
+	  margin: 0 auto;
+	  padding: 1.2em 3em 1.2em 1em;
+	  background: #3a3a46 url(../loginimages/key.png)no-repeat 390px 16px;
+	  color: #B4B4B4;
+	  	  border-radius: 3px;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		-o-border-radius: 3px;
 }
 </style>
 <script>
@@ -106,48 +126,39 @@ return false;
 </script>
 </head>
 <body>
-<div class="container">
-	<!-- header-section-starts -->
-	<div class="header">
-		<div class="top-header navbar-fixed-top">
-			<div class="container">
-				<div id="brand_name">
-					<a href="index.php" style="color:white;">Mechnovate</a>			
-				</div>
-				<div class="top-menu">
-				  <span class="menu"> </span>
-					<ul>
-						<li><a href="/#home" class="scroll">Home</a></li>
+	<!--top-nav-->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="#" id="brand" style="color:#3C948B">Mechnovate'16</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right" id="tabs">
+      						<li><a href="/#home">Home</a></li>
 						<li><a href="#">Convention</a></li>
 						<li><a href="/#services">Sponsors</a></li>
 						<li><a href="/#portfolio">Events</a></li>
 						<li><a href="/#portfolio">Workshops</a></li>
 						<li><a href="/#about">About US</a></li>
 						<li><a href="/#asme">Gallery</a></li>
-						<li><a href="/" class="scroll">Contact Us</a></li>
+						<li><a href="/">Contact Us</a></li>
+						<li><a href="login.php">Log in</a></li>
 						<div class="clearfix"></div>
-					</ul>
-				</div>
-				 <!--script-nav-->
-		 <script>
-		 $("span.menu").click(function(){
-		 $(".top-menu ul").slideToggle("slow" , function(){
-		 });
-		 });
-		 </script>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!--top-nav ends-->
 
-<!-- 			<div class="clearfix"></div>
--->			</div>
-		</div>
-
-    <!-- header-section-ends --> 
-</div>
-
-
-	<div class="login-form">
-	<h2> Register | Mechnovate </h2>
+<div class="login-form" style="height:900px;">
+	<h2> Register | Mechnovate'16 </h2>
 			<div class="form-info">
-					<form action="signupmech_php.php" method="post" name="form1" onsubmit="return validate();return validate1();">
+			<form action="signupmech_php.php" method="post" name="form1" onsubmit="return validate();return validate1();">
 							<input type="text" name="fname" class="email" placeholder="First Name" required=""/>
 							<input type="text" name="lname" class="email" placeholder="Last Name" required=""/>
 							<input type="email" name="email" class="email" placeholder="Email Address" required=""/>
@@ -158,11 +169,11 @@ return false;
 							<option value="m"> Male </option>
 							<option value="f"> Female </option>
 							</select>
-							<br><br>
+							<br>
 							
 							<input type="text" name="cname" class="email" placeholder="College Name" required=""/>
 							
-							<select class="form-control" name="shirt" id="InputName" required>
+							<select class="form-control" name="shirt" id="InputName" required style="">
 							<option value="1"> -- T_Shirt Size -- </option>
 							<option value="S"> S </option>
 							<option value="M"> M </option>
@@ -170,7 +181,7 @@ return false;
 							<option value="XL"> XL </option>
 							<option value="XXL"> XXL </option>
 							</select>
-							<br><br>
+							<br>
 							<input type="password" name="pass" class="password" placeholder="Password" required=""/>
 							<br><br>
 							<input type="password" name="cpass" class="password" placeholder="Confirm Password" required=""/>
@@ -180,12 +191,13 @@ return false;
 						</ul>
 					</form>
 			</div>
-			<span id="return"><a href="/">Return to home</a></span>
 	</div>
+
+
 <!--copyrights-->
 <!--/copyrights-->
 	<!--FOOTER-->
-<div class="footer">
+<div class="footer" >
 	 <div class="container">
 		<div class="footer-head row">
 			<div class="col-md-6">

@@ -13,44 +13,65 @@
 <!--webfonts-->
 <link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic|PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 <!--//webfonts-->
+<style>
+body {
+	padding-top:80px;
+}
+	.navbar {
+    min-height: 80px;
+   background-color:#fffffff;
+}
+#brand {
+	font-size:2em;
+	padding-top:30px;
+  }
+.navbar-nav > li > a {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    line-height: 80px;
+}
+.scroll {
+	font-size:1.3em;
+}
+@media (max-width: 767px) {
+    .navbar-nav > li > a {
+    line-height: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;}
+}
+</style>
 </head>
 <body>
 	<!--start-home-->
-	<!----- start-header---->
-			<div id="home" class="header two">
-					<div class="top-header two">	
-						<div class="container">
-						<div class="logo">
-							<a href="index.html"><h1>Mechnovate</span></h1></a>
-						</div>
-					<div class="top-menu">
-							<span class="menu"> </span>
-								<ul class="cl-effect-16">
-								 <li><a href="index.html" data-hover="Home">Home</a></li>
-								<li><a href="index.html" data-hover="Convention">Convention</a></li>
-								<li><a href="index.html" data-hover="Sponsors">Sponsors</a></li>
-								<li><a href="index.html" data-hover="Events">Events</a></li>
-								<li><a class="active" href="index.html" data-hover="Workshops">Workshops</a></li>
-								<li><a href="index.html" data-hover="About">About</a></li>
-								<li><a href="index.html" data-hover="Register">Register</a></li>
-								<li><a href="index.html" data-hover="Gallery">Gallery</a></li>
-								  <div class="clearfix"></div>
-								</ul>
-							</div>
-							<!-- script-for-menu -->
-								<script>
-									$("span.menu").click(function(){
-										$(".top-menu ul").slideToggle("slow" , function(){
-										});
-									});
-								</script>
-								<!-- script-for-menu -->
-							<div class="clearfix"> </div>
-					</div>
-				</div>
-			    <div class="clearfix"> </div>
-		</div>
-		<!----- //End-slider---->
+		<!--top-nav-->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="#" id="brand" style="color:#3C948B">Mechnovate'16</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right" id="tabs">
+       						<li><a href="/#home">Home</a></li>
+						<li><a href="#">Convention</a></li>
+						<li><a href="/#services">Sponsors</a></li>
+						<li><a href="/#portfolio">Events</a></li>
+						<li><a href="/#portfolio">Workshops</a></li>
+						<li><a href="/#about">About US</a></li>
+						<li><a href="/#asme">Gallery</a></li>
+						<li><a href="/">Contact Us</a></li>
+						<li><a href="login.php">Log in</a></li>
+						<li><a href="signupmech.php">Sign Up</a></li>
+						<div class="clearfix"></div>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!--top-nav ends-->
 <!---start-slide-bottom--->
 			<div class="about-section">
 				 <div class="container">

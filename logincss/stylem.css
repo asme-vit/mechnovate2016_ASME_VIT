@@ -27,33 +27,6 @@ ul{
 	margin:0;
 	padding:0;
 }
-.top-header{
-	background: #333333;
-}
-.logo{
-	float:left;
-	margin-top: 0.8em;
-}
-.top-menu{
-	float:right;
-}
-.top-menu ul li{
-	display:inline-block;
-	float:left;
-	border-right: 1.5px solid #583F5E;
-}
-.top-menu ul li a{
-	text-decoration: none;
-	padding: 1em 0;
-	color: #EEEEEE;
-	display: block;
-	font-size: 15px;
-	font-weight: 400;
-	margin: 1em 1em;
-}
-.top-menu ul li a:hover{
-	color:#60CBA1;
-}
 /*--- slider-css --*/
 .slider {
 	position: relative;
